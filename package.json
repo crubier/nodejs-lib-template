@@ -2,8 +2,10 @@
   "name": "nodejs-lib-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "publish": "tsc && npm publish",
     "test": "mocha --require ts-node/register --timeout 10000 src/tests/*"
   },
   "keywords": [],
