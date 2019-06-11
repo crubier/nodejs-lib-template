@@ -1,0 +1,18 @@
+kind: pipeline
+name: default
+
+steps:
+    -
+        name: 1
+        image: node:10-alpine
+        commands:
+            - npm ci
+            - npm test
+    # - 
+    #     name: npm
+    #     image: plugins/npm
+    #     settings:
+    #         username: xmorse
+    #         password:
+    #             from_secret: npm_password
+    #         email: beats.by.morse@gmail.com
