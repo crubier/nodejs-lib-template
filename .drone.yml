@@ -8,26 +8,26 @@ steps:
         commands:
             - npm ci
             - npm test
-    - 
-        name: bump
-        image: xplugins/bump
-        settings:
-            github_token: 
-                from_secret: github_token
-            versionfile: VERSION
-    - 
-        name: build
-        image: plugins/docker
-        settings:
-            repo: xplugins/bump
-            username: xmorse
-            # cache_from: xplugins/bump
-            tags: 
-                - latest
-                # [bump]
-                - 0.0.0
-            password:
-                from_secret: docker_password
+    # - 
+    #     name: bump
+    #     image: xplugins/bump
+    #     settings:
+    #         github_token: 
+    #             from_secret: github_token
+    #         versionfile: VERSION
+    # - 
+    #     name: build
+    #     image: plugins/docker
+    #     settings:
+    #         repo: xplugins/bump
+    #         username: xmorse
+    #         # cache_from: xplugins/bump
+    #         tags: 
+    #             - latest
+    #             # [bump]
+    #             - 0.0.0
+    #         password:
+    #             from_secret: docker_password
     # - 
     #     name: npm
     #     image: plugins/npm
