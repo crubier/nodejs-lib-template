@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "publish": "tsc && npm publish",
-    "test": "mocha --require ts-node/register --timeout 10000 src/tests/*"
+    "test": "mocha --require ts-node/register --timeout 10000 src/tests/* --colors"
   },
   "keywords": [],
   "author": "Tommaso De Rossi, morse <beats.by.morse@gmail.com>",
