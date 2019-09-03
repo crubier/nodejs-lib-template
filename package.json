@@ -3,10 +3,10 @@
   "_": "[bump]",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": ["/dist/*"],
   "scripts": {
-    "publish": "tsc && npm publish",
     "test": "mocha --require ts-node/register --timeout 10000 tests/* --colors"
   },
   "keywords": [],
