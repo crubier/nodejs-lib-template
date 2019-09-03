@@ -1,12 +1,7 @@
 name: Node.js Package
 
 on:
-  pull_request:
-    branches:
-      - master
-  push:
-    branches:
-      - master
+  - push
 
 jobs:
   build:
@@ -19,15 +14,18 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm test
+      - run: tsc && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
       - name: Bump version
         uses: remorses/bump-version@master
         with:
           version_file: VERSION
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: tsc && npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+
+
 
   # publish-gpr:
   #   needs: build
@@ -42,8 +40,6 @@ jobs:
   #     - run: npm publish
   #       env:
   #         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-
 
     
     
