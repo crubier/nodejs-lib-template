@@ -17,7 +17,8 @@ jobs:
       - run: tsc && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
-      # - uses: azure/container-actions/docker-login@master
+      # - name: Docker Login
+      #   uses: azure/container-actions/docker-login@master
       #   with:
       #     # login-server: contoso.azurecr.io
       #     username: ${{ secrets.DOCKER_USERNAME }}
