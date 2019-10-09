@@ -17,6 +17,16 @@ jobs:
       - run: tsc && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+      # - uses: azure/container-actions/docker-login@master
+      #   with:
+      #     # login-server: contoso.azurecr.io
+      #     username: ${{ secrets.DOCKER_USERNAME }}
+      #     password: ${{ secrets.DOCKER_PASSWORD }}
+      # - name: Publish Image
+      #   run: |
+      #     set -x
+      #     docker build . -t xmorse/example:latest
+      #     docker push xmorse/example:latest
       - name: Bump version
         uses: remorses/bump-version@js
         with:
