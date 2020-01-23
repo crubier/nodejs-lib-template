@@ -2,6 +2,7 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
+        "moduleResolution": "Node",
         "lib": [
             "es2017",
             "es7",
@@ -17,6 +18,7 @@
     "exclude": [
         "node_modules",
         "dist",
+        "esm",
         "tests",
     ]
 }
