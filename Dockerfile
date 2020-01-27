@@ -2,13 +2,13 @@ FROM node:10-alpine
 
 RUN apk  add --no-cache dumb-init # build-base
 
-WORKDIR /src
+WORKDIR /workdir
 
-COPY *.json /src/
+COPY *.json *.lock /src/
 
 RUN yarn
 
-COPY . /src/
+COPY . /workdir/
 
 ENTRYPOINT ["dumb-init", "--"]
 CMD ["yarn", "start"]
