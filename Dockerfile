@@ -6,9 +6,9 @@ WORKDIR /src
 
 COPY *.json /src/
 
-RUN npm ci
+RUN yarn
 
 COPY . /src/
 
 ENTRYPOINT ["dumb-init", "--"]
-CMD []
+CMD ["yarn", "start"]
