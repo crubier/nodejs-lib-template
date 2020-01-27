@@ -4,7 +4,7 @@ RUN apk  add --no-cache dumb-init # build-base
 
 WORKDIR /workdir
 
-COPY *.json *.lock /src/
+COPY *.json *.lock /workdir/
 
 RUN yarn
 
