@@ -1,3 +1,5 @@
-// process.env.TS_NODE_PROJECT = 'tests/tsconfig.json'
-process.env.TESTING = '1'
-require('ts-node/register')
+const { config } = require('dotenv')
+
+config({ path: 'test.env', })
+// require('ts-node/register')
+require('sucrase/register')

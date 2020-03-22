@@ -11,4 +11,4 @@ RUN yarn
 COPY . /workdir/
 
 ENTRYPOINT ["dumb-init", "--"]
-CMD ["yarn", "start"]
+CMD yarn dev
