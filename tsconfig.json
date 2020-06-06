@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "ES5",
         "module": "commonjs",
+        "importHelpers": true,
         "moduleResolution": "Node",
         "lib": [
             "es2017",
             "es7",
-            "es6",
+            "es6"
             // "dom"
         ],
         "declaration": true,
@@ -14,13 +15,9 @@
         "strict": false,
         "esModuleInterop": true,
         "noImplicitAny": false,
+        "sourceMap": true,
         "jsx": "react",
+        "skipLibCheck": true
     },
-    "exclude": [
-        "node_modules",
-        "dist",
-        "esm",
-        "example",
-        "tests",
-    ]
+    "exclude": ["node_modules", "dist", "esm", "example", "tests"]
 }
